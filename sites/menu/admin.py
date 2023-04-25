@@ -5,6 +5,7 @@ class MenuItemInline(admin.TabularInline):
     model = MenuItem
     extra = 0
 
+
 class MenuAdmin(admin.ModelAdmin):
     list_display = ('name',)
     inlines = [MenuItemInline]
@@ -15,4 +16,4 @@ class MenuItemAdmin(admin.ModelAdmin):
     search_fields = ('title', 'menu__name', 'url')
 
 admin.site.register(Menu, MenuAdmin)
-admin.site.register(MenuItem, MenuItemAdmin)
+# admin.site.register(MenuItem, MenuItemAdmin)
